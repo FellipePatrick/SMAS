@@ -1,0 +1,27 @@
+@media (max-width: 391px) {
+    body{
+        background: linear-gradient(to right, #ffffff, #ffffff);
+    }
+    button{
+        width: 60%;
+        background-color: #F5AA52;
+    }
+    .container {
+        margin-right: auto;
+        width: 90%;
+        height: 80%;
+      }
+    input{
+        width: 80%;
+    }
+    button:hover {
+        background: #F5AA52;
+      }
+    .loginText{
+        margin-left: 20px;
+    }
+    .image{
+      margin-left: -50px;
+    }
+    
+  }

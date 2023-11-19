@@ -5,8 +5,9 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #F5AA52, #FAD9A9);
+    background: linear-gradient(to right, #ffffff, #ffffff);
     font-family: 'Inter', sans-serif; 
+    flex-direction: column;
   }
   
   .container {
@@ -16,6 +17,13 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: center;
+  }
+
+
+
+  a{
+    text-decoration: none;
+    color: blue;
   }
   
   .login-form {
@@ -92,8 +100,9 @@ body {
     outline: none;
   }
   button {
+    font-weight: bold;
     width: 50%;
-    background: #0904F9;
+    background-color: #F5AA52;
     color: #fff;
     padding: 12px;
     border: none;
@@ -103,33 +112,77 @@ body {
     transition: background 0.3s ease;
   }
   
+  button a{
+    color: white;
+  }
+  
   button:hover {
     background: #0904F9;
   }
-  @media (max-width: 391px) {
-    body{
-        background: linear-gradient(to right, #ffffff, #ffffff);
-    }
-    button{
-        width: 60%;
-        background-color: #F5AA52;
-    }
-    .container {
-        margin-right: auto;
-        width: 90%;
-        height: 80%;
-      }
-    input{
-        width: 80%;
-    }
-    button:hover {
-        background: #F5AA52;
-      }
-    .loginText{
-        margin-left: 20px;
-    }
-    .image{
-      margin-left: -50px;
-    }
-    
+footer {
+  font-weight: bold;
+  font-size: 0.8rem;
+  color: #333;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+  bottom: 0;
+
+}
+
+@media (max-width: 391px) {
+  body{
+      background: linear-gradient(to right, #ffffff, #ffffff);
   }
+  button{
+      width: 60%;
+      background-color: #F5AA52;
+  }
+  .container {
+      margin-right: auto;
+      width: 90%;
+      height: 80%;
+    }
+  input{
+      width: 80%;
+  }
+  button:hover {
+      background: #F5AA52;
+    }
+  .loginText{
+      margin-left: 20px;
+  }
+  .image{
+    margin-left: -50px;
+  }
+  
+}
+
+
+@media (max-width: 850px) and (min-width: 391px)  {
+  body{
+    background: linear-gradient(to right, #ffffff, #ffffff);
+  }
+  button{
+      width: 50%;
+      background-color: #F5AA52;
+  }
+  .container {
+
+      width: 70%;
+      height: 80%;
+    }
+  input{
+      width: 50%;
+  }
+  button:hover {
+      background: #F5AA52;
+    }
+  .loginText{
+      margin-left: 10%;
+  }
+  .image{
+    margin-left: -50px;
+  }
+  
+}
