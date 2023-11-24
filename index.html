@@ -13,18 +13,24 @@
     <main class="container">
         <form class="login-form">
           <div class="logo">
-            <img src="./assets/img/logo.png" alt="" class="image">
-            <h2 class="loginText">Login</h2>
+            <div class="imageLogo">
+              <img src="./assets/img/logo.png" alt="" class="image">
+            </div>
+            <div class="logoName">
+              <h2 class="loginText">Login</h2>
+            </div>
           </div>
           <div class="bodyForm">
             <label for="username">Email</label>
             <input type="text" id="username" name="username" required placeholder="user.mail@email.com">
             <label for="password">Senha</label>
-            <input type="password" id="password" name="password" placeholder="******" required>
+            <input type="password" id="password" name="password" placeholder="*********" required>
             <button type="submit">Entrar</button>
             <div class="links">
+               <div class="conect">
                 <input type="radio" id="male" name="conect" value="male">
                 <a>Manter-me conectado</a><br>
+               </div>
                 <a href="./assets/routes/cadastro.html">Solicitar cadastro</a><br><br>
                 <a href="https://www.google.com.br/" class="red">Sair</a>
             </div>

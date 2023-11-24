@@ -1,3 +1,4 @@
+@import url("medias.css");
 body {
     margin: 0;
     padding: 0;
@@ -5,21 +6,18 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to right, #ffffff, #ffffff);
+    background: linear-gradient(to right, #ebbf8e, #F5AA52);
     font-family: 'Inter', sans-serif; 
     flex-direction: column;
   }
   
   .container {
     text-align: center;
-    width: 30%;
     height: 80%;
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
-
-
 
   a{
     text-decoration: none;
@@ -33,7 +31,7 @@ body {
     border-radius: 8px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
     height: 80%;
-    width: 100%;
+    width: 500px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -49,7 +47,7 @@ body {
   }
   
   .loginText{
-    margin-left: 20px;
+    margin-bottom: 30px;
     font-size: 2.5rem;
     font-weight: bold;
     text-align: center;
@@ -61,11 +59,13 @@ body {
     height: 90px;
   }
   
-  .logo{
-    margin-bottom: auto;
-    align-self: flex-start;
-    display: inline-flex;
-  }
+ .imageLogo{
+  margin: 0;
+  height: 30px;
+  width: 100%;
+  display: flex;
+  align-items: start;
+ }
 
   #male{
     margin-top: 15px;
@@ -89,6 +89,7 @@ body {
 
   .bodyForm{
     margin-bottom: auto;
+    width: 100%;
   }
   input {
     width: 60%;
@@ -116,73 +117,93 @@ body {
     color: white;
   }
   
-  button:hover {
-    background: #0904F9;
-  }
 footer {
-  font-weight: bold;
+  width: 100%;
   font-size: 0.8rem;
-  color: #333;
+  color: #0000007a;
   text-align: center;
-  padding: 10px;
   position: relative;
   bottom: 0;
 
 }
-
-@media (max-width: 391px) {
+@media (max-width: 412px) and (min-width:200px){
   body{
       background: linear-gradient(to right, #ffffff, #ffffff);
   }
-  button{
-      width: 60%;
-      background-color: #F5AA52;
-  }
-  .container {
-      margin-right: auto;
-      width: 90%;
-      height: 80%;
-    }
-  input{
-      width: 80%;
-  }
-  button:hover {
-      background: #F5AA52;
-    }
-  .loginText{
-      margin-left: 20px;
+  .login-form{
+    margin-left: -30px;
+    width: 100%;
+    height: 90%;
   }
   .image{
-    margin-left: -50px;
+    width: 90px;
+    height: 60px;
   }
-  
+  input {
+    width: 80%;  
+  }
+  button{
+    width: 70%;
+  }
+  footer{
+    margin-top: 10px;
+  }
 }
 
 
-@media (max-width: 850px) and (min-width: 391px)  {
-  body{
-    background: linear-gradient(to right, #ffffff, #ffffff);
+@media (max-width: 728px) and (min-width: 412px)  {
+  .login-form{
+    margin-top: 20px;
+    height: 90%;
   }
-  button{
-      width: 50%;
-      background-color: #F5AA52;
+  footer{
+    margin-top: 20px;
   }
-  .container {
-
-      width: 70%;
-      height: 80%;
-    }
-  input{
-      width: 50%;
-  }
-  button:hover {
-      background: #F5AA52;
-    }
+}
+@media (max-width: 1920px) and (min-width: 1500px)  {
   .loginText{
-      margin-left: 10%;
+    margin-bottom: 60px;
+    font-size: 3.5rem;
   }
   .image{
-    margin-left: -50px;
+    width: 200px;
+    height: 130px;
+  }
+  .login-form{
+    margin-top: 20px;
+    width: 1000px;
+    height: 100%;
+    font-size: 2rem;
+  }
+  button {
+    font-weight: bold;
+    background-color: #F5AA52;
+    height: 80px;
+    border-radius: 30px;
+    font-size: 2rem;
+  }
+  .links{
+    font-size: 1.5rem; 
+    margin-top: 30px;
+    margin-bottom: 20px;
+  }
+  input {
+    height: 80px;
+    border-radius: 30px;
+    font-size: 1.5rem;
+    margin-bottom: 45px;
+  }
+  label {
+    margin-bottom: 32px;
   }
   
+  footer{
+    margin-top: 40px;
+    font-size: 1.6rem;
+  }
+  #male{
+    margin-top: -30px;
+    width: 3%;
+    margin-left: -50px;
+  }
 }
