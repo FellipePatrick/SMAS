@@ -1,0 +1,168 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+select{
+    width: 200px;
+    height: 40px;
+    border-radius:10px;
+    border: 0px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.conteudo{
+    display: inline-flex;
+}
+
+.conteudo i{
+    color: white;
+    margin-left: 10px;
+    font-size: 30px;
+}
+select:focus {
+    outline: none;
+    border: none; /* ou qualquer outra propriedade de borda desejada */
+}
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    width: 100%;
+    background-color: white;
+    display: flex;
+}
+
+.container section{
+    width: 50%;
+    height: 450px;
+    background-color: #ffa033d6;
+    border-radius: 10px;
+    color: white;
+}
+
+.container section .conteudo{
+    padding: 30px;
+}
+
+form{
+    margin-left: 20%;
+}
+
+input{
+    height: 40px;
+    width: 200px;
+    border-radius:10px;
+    border: 0px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+input::placeholder{
+    padding: 10px;
+    font-weight: bold;
+}
+
+input:focus {
+    outline: none;
+    border: none; /* ou qualquer outra propriedade de borda desejada */
+}
+
+.groupInput{
+    margin-top: 30px;
+    width: 70%;
+    display: inline-flex;
+    justify-content: space-between;
+}
+.groupInput {
+    margin-bottom: 15px;
+}
+
+button {
+    background-color: blue;
+    color: #ffffff;
+
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    height: 30px;
+    width: 20%;
+
+}
+
+button:hover {
+    background-color: #ffffff;
+    color: blue;
+}
+
+@media (max-width: 412px) and (min-width:200px){
+    .groupInput{
+        margin-top: 0px;
+        flex-direction: column;
+        width: 70%;
+
+    }
+    .groupInput {
+        margin-bottom: 0px;
+    }
+    input{
+        margin-bottom: 8px;
+        margin-left: 0px;
+    }
+    select{
+        margin-bottom: 8px;
+     }
+    .container section{
+        width: 80%;
+        height: 450px;
+    }
+    button{
+        align-items: center;
+        width: 60px;
+    }
+  }
+  
+  
+  @media (max-width: 768px) and (min-width: 412px)  {
+    .container section{
+        width: 80%;
+        height: 450px;
+    }
+    
+    .container section .conteudo{
+        padding: 20px;
+    }
+    input{
+        margin-left: 10px;
+    }
+    .container section{
+        margin-left: 10px;
+    }
+ 
+  }
+  @media (max-width: 1920px) and (min-width: 1500px)  {
+    .container section{
+        height: 750px;
+    }
+    .container section h2{
+        font-size: 3rem;
+    }
+    input{
+        font-size: 1.3rem;
+        width: 250px;
+        height: 60px;
+    }
+    select{
+        font-size: 1.3rem;
+        width: 250px;
+        height: 60px;
+    }
+    button{
+        height: 50px;
+        font-size: 1.3rem;
+    }
+  }

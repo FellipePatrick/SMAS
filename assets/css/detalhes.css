@@ -1,0 +1,76 @@
+.abelha{
+    width: 70px;
+    height: 40%;
+    border-radius: 100%
+}
+header h2{
+    margin-left: 15px;
+}
+.informacoes{
+    padding-left: 4.5%;
+    display: flex;
+    flex-direction:  column;
+}
+
+.informacoes h2{
+    padding-top: 4%;
+}
+
+.informacoes p{
+    margin-top: 2%;
+    padding-left: 2%;
+    padding-right: 7%;
+}
+
+header{
+    padding-top: 3%;
+    font-size: 1rem;
+    display: flex;
+    justify-content: column;
+    padding-left:3%;
+    margin-top: 3%;
+}
+
+.button{
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1rem;
+    border:none;
+    width: 130px;
+    height: 40px;
+    border-radius: 50px;
+    color:aliceblue;
+    background-color: coral;
+    box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
+}
+
+.alertas{
+    margin-left: auto;
+    margin-right: 3%;
+}
+
+.fonte{
+    margin-left: auto;
+    margin-top: 2%;
+    margin-right: 3%;
+}
+
+footer {
+    width: 100%;
+    font-size: 0.8rem;
+    color: #0000007a;
+    text-align: center;
+    position: relative;
+    bottom: 0;
+    margin-top: 50px;
+  }
+
+.perfil2{
+    display: none;
+}
+
+@media screen and (max-width: 768px) {
+    main{
+        margin-top: 50px;
+    }
+}
