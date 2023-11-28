@@ -6,3 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
         menu.classList.toggle('show');
     });
 });
+
+function alertar(){
+    alert("deu certo");
+}

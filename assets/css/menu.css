@@ -1,0 +1,220 @@
+.container section{
+    width: 100%;
+}
+
+.serchFilter{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    position: relative; 
+}
+
+.serchFilter input{
+    width: 40%;
+    height: 50px;
+    font-size: 0.9rem;
+    border-radius: 25px;
+    border: 1px solid #888;
+    padding-left: 20px;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+input:focus {
+    outline: none; /* ou qualquer outra propriedade de borda desejada */
+}
+
+
+.fa-magnifying-glass {
+    position: absolute;
+    top: 50%;
+    margin-left: 35%;
+    cursor: pointer;
+    transform: translateY(-50%);
+    color: #888; /* Cor do ícone */
+}
+
+.text-input {
+    width: 100%;
+    padding-right: 0px; /* Adapte conforme necessário para deixar espaço para o ícone */
+}
+
+.alertar{
+    margin-top: 5%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.alertar i{
+    margin-right: 20px;
+    font-size: 2rem;
+    color: blue;
+}
+
+.alertar a{
+    color: 1rem;
+    margin-top: 10px;
+    color: red;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.alertas{
+    justify-content: center;
+    margin-top: 5%;
+    width: 100%;
+}
+
+.card{
+    width: 90%;
+    margin-left: 5%;
+    background-color: #D9D9D9;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    display: inline-flex; 
+    align-items: center;
+}
+
+.card img{
+    width: 80px;
+    height: 80px;
+    border-radius: 40px;
+}
+
+.info{
+    margin-top: 5px;
+    font-size: 0.8rem;
+    display: inline-flex;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+.alertas h2{
+    padding: 20px;
+}
+
+.group-info{
+    display: flex; 
+    flex-direction: column;
+}
+
+.left{
+    width: 18%; 
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.right{
+    width: 75%;
+}
+
+@media (max-width: 413px) and (min-width:200px){
+    .serchFilter{
+        position:static;
+    }
+    .serchFilter input{
+        width: 90%;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+    .alertar{
+        margin-top: 10%;
+    }
+    .fa-magnifying-glass {
+        position: absolute;
+        top:  25.5%;
+        margin-left: 70%;
+    }
+    .card img{
+        width: 50px;
+        height: 50px;
+        border-radius: 25px;
+    }
+    .card .name{
+        font-size: 0.8rem;
+    }
+    p{
+        font-size: 0.7rem;
+    }
+    .card{
+        margin-left: 0;
+        padding: 0;
+        width: 100%;
+    }
+    .right{
+        width: 50%;
+    }
+    .left{
+        width: 40%;
+    }
+}
+
+@media (max-width: 768px) and (min-width: 413px)  {
+    .serchFilter{
+        position:static;
+    }   
+    .card{
+        margin-left: 5%;
+        padding: 0;
+        width: 90%;
+    }
+    .right{
+        width: 50%;
+    }
+    .left{
+        width: 30%;
+    }
+    .alertar{
+        margin-top: 7%;
+    }
+    .fa-magnifying-glass {
+        position: absolute;
+        top:  28.5%;
+        margin-left: 30%;
+    }
+    p{
+        font-size: 0.9rem;
+    }
+  }
+  @media (max-width: 1920px) and (min-width: 1500px)  {
+    .serchFilter input{
+        height: 100px;
+        font-size: 1.5rem;
+        border-radius: 50px;
+      }
+    p{
+        font-size: 1.5rem;
+    }
+    .alertar i{
+        font-size: 4rem;
+    }
+    
+    .alertar a{
+        font-size: 1.8rem;
+        margin-top: 15px;
+    }
+    .fa-magnifying-glass {
+        font-size: 2rem;
+    }
+    .alertas h2{
+        font-size: 2rem;
+    }
+    .card .name{
+        font-size: 1.5rem;
+    }
+    .info{
+        font-size: 1.3rem;
+    }
+    .card img{
+        width: 100px;
+        height: 100px;
+        border-radius: 50px;
+    }
+    
+  }

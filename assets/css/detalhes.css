@@ -26,7 +26,8 @@ header{
     padding-top: 3%;
     font-size: 1rem;
     display: flex;
-    justify-content: column;
+    width: 95%;
+    justify-content: space-between;
     padding-left:3%;
     margin-top: 3%;
 }
@@ -44,7 +45,12 @@ header{
     box-shadow: 0px 4px 4px rgba(0,0,0,0.25);
 }
 
-.alertas{
+.button a{
+    text-decoration: none;
+    color: white;
+}
+
+.alertaS{
     margin-left: auto;
     margin-right: 3%;
 }
