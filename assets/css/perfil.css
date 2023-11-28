@@ -14,7 +14,7 @@
     display: flex;
 }
 
-.container section{
+.edit{
     width: 50%;
     height: 450px;
     background-color: #ffa033d6;
@@ -83,6 +83,38 @@ button:hover {
     border-radius: 30px;
 }
 
+.table{
+    margin-top: 5%;
+    width: 70%;
+}
+
+.minha-tabela {
+    margin-top: 30px;
+    width: 100%;
+    border-collapse: collapse;
+   }
+   
+   .minha-tabela th,
+   .minha-tabela td {
+    border: 1px solid #ddd;
+    padding: 8px;
+   }
+   
+   .minha-tabela tr:nth-child(even) {
+    background-color: #f2f2f2;
+   }
+
+   
+   .minha-tabela th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    text-align: left;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+   }
+
+   
+ 
 @media (max-width: 412px) and (min-width:200px){
     .groupInput{
         margin-top: 0px;
@@ -124,10 +156,10 @@ button:hover {
  
   }
   @media (max-width: 1920px) and (min-width: 1500px)  {
-    .container section{
+    .edit{
         height: 750px;
     }
-    .container section h2{
+    .edit h2{
         font-size: 3rem;
     }
     input{

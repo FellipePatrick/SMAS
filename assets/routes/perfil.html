@@ -26,7 +26,7 @@
         <div class="menu-icon">&#9776;</div>
     </nav>
     <main class="container">
-        <section>
+        <section class="edit">
             <div class="conteudo">
                 <h2>Editar Perfil</h2>
             </div>
@@ -36,7 +36,7 @@
                         <input type="text" placeholder="Nome">
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Matricula">
+                        <input type="text" placeholder="Municipio">
                     </div>
                 </div>
                 <div class="groupInput">
@@ -58,7 +58,30 @@
                 </div>
             </form>
         </section>
+        <section class="table">
+            <h2>Alertas</h2>
+            <table class="minha-tabela">
+                <thead>
+                  <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Editar</th>
+                    <th>Deletar</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>1</td>
+                    <td>João</td>
+                    <td ><a href="./editar.html"><i class="fa-solid fa-pen" style="color: green;"></i></a></td>
+                    <td><a href=""><i class="fa-solid fa-xmark" style="color: red;"></i></a></td>
+                  </tr>
+                  <!-- Adicione mais linhas conforme necessário -->
+                </tbody>
+               </table>
+        </section>
     </main>
+       
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>

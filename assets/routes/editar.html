@@ -28,28 +28,32 @@
     <main class="container">
         <section>
             <div class="conteudo">
-                <h2>Editar Abelhas</h2>
+                <h2>Editar Alerta</h2>
             </div>
             <form action="">
                 <div class="groupInput">
                     <div class="input">
+                        <input type="text" placeholder="Municipio">
+                    </div>
+                    <div class="input">
                         <input type="text" placeholder="Nome">
                     </div>
+                </div>
+                <div class="groupInput">
                     <div class="input">
-                        <input type="text" placeholder="Sobre">
+                        <select id="opciones" name="opciones" aria-placeholder="select">
+                            <option value="opcion1">Jataí   </option>
+                            <option value="opcion2">Opción 2</option>
+                            <option value="opcion3">Opción 3</option>
+                          </select>
+                    </div>
+                    <div class="input">
+                        <input type="date" placeholder="20/10/2003">
                     </div>
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <input type="text" placeholder="Enviar Foto">
-                    </div>
-                    <div class="input">
-                        <input type="text" placeholder="Como Capturar">
-                    </div>
-                </div>
-                <div class="groupInput">
-                    <div class="input">
-                        <input type="text" placeholder="Como Criar" style="height: 100px;">
+                        <input type="text" placeholder="Descrição da ocasião" style="height: 100px;">
                     </div>
                     <button>
                         salvar

@@ -25,6 +25,18 @@
 .container section .conteudo{
     padding: 30px;
 }
+select:focus {
+    outline: none;
+    border: none; /* ou qualquer outra propriedade de borda desejada */
+}
+select{
+    width: 200px;
+    height: 40px;
+    border-radius:10px;
+    border: 0px solid white;
+    padding: 10px;
+    box-sizing: border-box;
+}
 
 form{
     margin-left: 20%;
