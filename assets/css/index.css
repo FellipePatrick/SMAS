@@ -1,4 +1,4 @@
-@import url("medias.css");
+
 body {
     margin: 0;
     padding: 0;
@@ -100,7 +100,7 @@ body {
     border-radius: 15px;
     outline: none;
   }
-  button {
+  .button {
     font-weight: bold;
     width: 50%;
     background-color: #F5AA52;
@@ -113,7 +113,7 @@ body {
     transition: background 0.3s ease;
   }
   
-  button a{
+  .button a{
     color: white;
   }
   
@@ -142,7 +142,7 @@ footer {
   input {
     width: 80%;  
   }
-  button{
+  .button{
     width: 70%;
   }
   footer{
@@ -175,7 +175,7 @@ footer {
     height: 100%;
     font-size: 2rem;
   }
-  button {
+  .button {
     font-weight: bold;
     background-color: #F5AA52;
     height: 80px;

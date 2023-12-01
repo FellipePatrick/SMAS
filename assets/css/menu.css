@@ -70,13 +70,14 @@ input:focus {
 .card{
     width: 90%;
     margin-left: 5%;
-    background-color: #D9D9D9;
+    background-color: #fff4f4;
     justify-content: center;
     flex-direction: row;
     border-radius: 20px;
     margin-bottom: 20px;
     display: inline-flex; 
     align-items: center;
+    box-shadow: 4px 4px 4px #00000063;
 }
 
 .card img{
@@ -114,7 +115,7 @@ input:focus {
     width: 75%;
 }
 
-@media (max-width: 413px) and (min-width:200px){
+@media (max-width: 412px) and (min-width:200px){
     .serchFilter{
         position:static;
     }

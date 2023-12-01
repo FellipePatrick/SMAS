@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMAS - Sistema de Monitoramento de Abelhas Selvagens</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/index.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link rel="icon" href="./assets/img/logoT.png" type="image/png">
 
 </head>
 <body>
     <main class="container">
-        <form class="login-form">
+        <form class="login-form" id="login-form">
           <div class="logo">
             <div class="imageLogo">
               <img src="./assets/img/logo.png" alt="" class="image">
@@ -22,16 +22,16 @@
           </div>
           <div class="bodyForm">
             <label for="username">Email</label>
-            <input type="text" id="username" name="username" required placeholder="user.mail@email.com">
+            <input type="text" id="email" name="email" required placeholder="user.mail@email.com">
             <label for="password">Senha</label>
             <input type="password" id="password" name="password" placeholder="*********" required>
-            <button type="submit"><a href="./assets/routes/menu.html" style="text-decoration: none; color: white;">Entrar</a></button>
+            <input type="button" class="button" value="Entrar" onclick="entrar()"></input>
             <div class="links">
                <div class="conect">
                 <input type="radio" id="male" name="conect" value="male">
                 <a>Manter-me conectado</a><br>
                </div>
-                <a href="./assets/routes/cadastro.html">Solicitar cadastro</a><br><br>
+                <a href="./assets/routes/sing_up.html">Solicitar cadastro</a><br><br>
                 <a href="https://www.google.com.br/" class="red">Sair</a>
             </div>
           </div>
@@ -40,5 +40,6 @@
       <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
       </footer>
+      <script src="./assets/js/sign_in.js"></script>
 </body>
 </html>

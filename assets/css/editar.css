@@ -51,11 +51,6 @@ input{
     box-sizing: border-box;
 }
 
-input::placeholder{
-    padding: 10px;
-    font-weight: bold;
-}
-
 input:focus {
     outline: none;
     border: none; /* ou qualquer outra propriedade de borda desejada */
@@ -103,6 +98,9 @@ button:hover {
         margin-bottom: 8px;
         margin-left: 0px;
     }
+    select{
+        margin-bottom: 8px;
+     }
     .container section{
         width: 80%;
         height: 450px;
@@ -110,11 +108,12 @@ button:hover {
     button{
         align-items: center;
         width: 60px;
+        margin-left: 140px;
     }
   }
   
   
-  @media (max-width: 768px) and (min-width: 412px)  {
+  @media (max-width: 768px) and (min-width: 413px)  {
     .container section{
         width: 80%;
         height: 450px;
@@ -137,6 +136,11 @@ button:hover {
         font-size: 3rem;
     }
     input{
+        font-size: 1.3rem;
+        width: 250px;
+        height: 60px;
+    }
+    select{
         font-size: 1.3rem;
         width: 250px;
         height: 60px;

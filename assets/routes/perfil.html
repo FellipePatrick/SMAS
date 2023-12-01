@@ -14,14 +14,14 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../img/user1.jpg" alt="">
+            <img  alt="imagem de perfil" onclick="perfil()" id="img-perfil">
         </div>
         <div class="menu">
-            <a href="./perfil.html">perfil</a>
-            <a href="./menu.html">menu</a>
-            <a href="./alerta.html">alertar</a>
-            <a href="./rastreamento.html">rastreamento</a>
-            <a href="../../index.html">Sair</a>
+            <a onclick="perfil()">perfil</a>
+            <a onclick="menu()">menu</a>
+            <a onclick="alertar()">alertar</a>
+            <a onclick="rastreamento()">rastreamento</a>
+            <a onclick="sair()">Sair</a>
         </div>
         <div class="menu-icon">&#9776;</div>
     </nav>
@@ -33,28 +33,26 @@
             <form action="">
                 <div class="groupInput">
                     <div class="input">
-                        <input type="text" placeholder="Nome">
+                        <input type="text" placeholder="Nome" id="name"></input>
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Municipio">
+                        <input type="text" id="municipality"></input>
                     </div>
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <img src="../img/user1.jpg" alt="" class="img">
-                        <input type="file" placeholder="Enviar Foto">
+                        <img  alt="" class="img" id="img">
+                        <input type="file" placeholder="Enviar Foto" onchange="updateImageUser()" id="uploadImage" >
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Email">
+                        <input type="text" id="email"></input>
                     </div>
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <input type="password" placeholder="Senha" >
+                        <input type="password" id="password"></input>
                     </div>
-                    <button>
-                        salvar
-                    </button>
+                    <input type="button" onclick="perfil()" value="enviar"></input>
                 </div>
             </form>
         </section>
@@ -73,7 +71,7 @@
                   <tr>
                     <td>1</td>
                     <td>João</td>
-                    <td ><a href="./editar.html"><i class="fa-solid fa-pen" style="color: green;"></i></a></td>
+                    <td ><a href="./updateAlert.html"><i class="fa-solid fa-pen" style="color: green;"></i></a></td>
                     <td><a href=""><i class="fa-solid fa-xmark" style="color: red;"></i></a></td>
                   </tr>
                   <!-- Adicione mais linhas conforme necessário -->
@@ -85,7 +83,7 @@
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>
-        <script src="../js/script.js"></script>
+        <script src="../js/perfil.js"></script>
         <script src="https://kit.fontawesome.com/4fe9bd0970.js" crossorigin="anonymous"></script>
     </body>
 </html>

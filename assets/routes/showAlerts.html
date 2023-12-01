@@ -5,10 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMAS - Sistema de Monitoramento de Abelhas Selvagens</title>
     <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/menu.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" href="../img/logoT.png" type="image/png">
-
 </head>
 <body>
     <nav class="navbar">
@@ -25,11 +25,27 @@
         <div class="menu-icon">&#9776;</div>
     </nav>
     <main class="container">
+        <section class="search">
+            <div class="serchFilter">
+                <input type="text" class="text-input" placeholder="Digite o nome da Abelha">
+                <i class="fa-solid fa-magnifying-glass" onclick="alertar()"></i>
+            </div>
+            <div class="alertar">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <a href="./alerta.html">Alertar sobre Abelhas</a>
+            </div>
+        </section>
+        <section class="alertas">
+            <h2>Ultimos Alertas</h2>
+            <div class="card" id="card">
+                
+            </div>
+        </section>
     </main>
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>
-        <script src="../js/script.js"></script>
+        <script src="../js/showAlerts.js"></script>
         <script src="https://kit.fontawesome.com/4fe9bd0970.js" crossorigin="anonymous"></script>
     </body>
 </html>

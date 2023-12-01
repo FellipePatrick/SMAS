@@ -9,7 +9,6 @@
     justify-content: space-between;
     display: flex;
 }
-
 .card{
     padding: 20px;
     width: 300px;
@@ -19,23 +18,18 @@
     background: #F5AA52;
     box-shadow: 2px 2px 4px #00000063;
 }
-
 .card-img{
     height: 100%;
     width: 20%;
 }
-
 .img-card{
     height: 60px;
     width: 60px;
 }
-
-.card-img-be{
-    
+.card-img-be{   
     margin-top: 10%;
     flex-direction: column;
 }
-
 .card-img-be h3{
     color: white;
     margin-top: 10px;
@@ -60,13 +54,10 @@ button{
     width: 100px;
 
 }
-
 button a{
     text-decoration: none;
     color: black;
 }
-
-
 @media (max-width: 412px) and (min-width:200px){
     .container section{
         width: 100vh;
@@ -92,8 +83,7 @@ button a{
 }
   
   
-  @media (max-width: 768px) and (min-width: 412px)  {
- 
+  @media (max-width: 768px) and (min-width: 413px)  {
     .container section{
         width: 90%;
         height: 450px;

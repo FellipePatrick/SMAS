@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SMAS - Sistema de Monitoramento de Abelhas Selvagens</title>
     <link rel="stylesheet" href="../css/base.css">
-    <link rel="stylesheet" href="../css/editar.css">
+    <link rel="stylesheet" href="../css/alerta.css">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel="icon" href="../img/logoT.png" type="image/png">
@@ -14,21 +14,22 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <img src="../img/user1.jpg" >
+            <img  alt="imagem perfil" onclick="perfil()" id="img-perfil">
         </div>
         <div class="menu">
-            <a href="./perfil.html">perfil</a>
-            <a href="./menu.html">menu</a>
-            <a href="./alerta.html">alertar</a>
-            <a href="./rastreamento.html">rastreamento</a>
-            <a href="../../index.html">Sair</a>
+            <a onclick="perfil()">perfil</a>
+            <a onclick="menu()">menu</a>
+            <a onclick="alertar()">alertar</a>
+            <a onclick="rastreamento()">rastreamento</a>
+            <a onclick="sair()">Sair</a>
         </div>
         <div class="menu-icon">&#9776;</div>
     </nav>
     <main class="container">
         <section>
             <div class="conteudo">
-                <h2>Editar Alerta</h2>
+                <h2>Alertar Abelhas</h2>
+                <i class="fa-solid fa-circle-exclamation"></i>
             </div>
             <form action="">
                 <div class="groupInput">
@@ -53,11 +54,10 @@
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <input type="text" placeholder="Descrição da ocasião" style="height: 100px;">
+                        <textarea name="alerta" id="alerta" cols="30" rows="10"></textarea>
                     </div>
-                    <button>
-                        salvar
-                    </button>
+                    <input type="button" value="Cadastrar" onclick="cadastrar()">
+                    </input>
                 </div>
             </form>
         </section>
@@ -65,6 +65,7 @@
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>
-        <script src="../js/script.js"></script>
+        <script src="../js/addAlert.js"></script>
+        <script src="https://kit.fontawesome.com/4fe9bd0970.js" crossorigin="anonymous"></script>
     </body>
 </html>

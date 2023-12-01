@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SMAS - Sistema de Monitoramento de Abelhas Selvagens</title>
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap">
+    <link rel="icon" href="../img/logoT.png" type="image/png">
+
+</head>
+<body>
+    <main class="container">
+        <form class="login-form" id="login-form">
+          <div class="logo">
+            <div class="imageLogo">
+              <img src="../img/logo.png" alt="" class="image">
+            </div>
+            <div class="logoName">
+              <h2 class="loginText">Cadastro</h2>
+            </div>
+          </div>
+          <div class="bodyForm" id="bodyForm">
+            <label for="email">Email</label>
+            <input type="text" id="email" name="email" required placeholder="user.mail@email.com" autofocus>
+            <label for="name">Nome</label>
+            <input type="text" id="name" name="name" placeholder="José Ortega" required>
+            <label for="Municipality">Municipio</label>
+            <input type="text" id="municipality" name="Municipality" placeholder="São Pedro" required>
+            <input type="button" class="button" value="Proximo" onclick="insert()"></input>
+            <div class="links">
+                <a href="../../index.html" class="red">Voltar</a>
+            </div>
+          </div>
+          <p id="warning"></p>
+        </form>
+        <form class="login-form" id="login-password" style="display: none;">
+          <div class="logo">
+            <div class="imageLogo">
+              <img src="../img/logo.png" alt="" class="image">
+            </div>
+            <div class="logoName">
+              <h2 class="loginText">Senha</h2>
+            </div>
+          </div>
+          <div class="bodyForm" >
+            <label for="password">Senha</label>
+            <input type="password" id="password" name="password" placeholder="******" required>
+            <label for="password">Repetir Senha</label>
+            <input type="password" id="repeatpassword" name="repeatpassword" placeholder="******" required>
+            <input type="button" value="Definir" class="button" onclick="insert_password()">
+                
+            </input>
+            <div class="links">
+                <a href="./sing_up.html" class="red">Voltar</a>
+            </div>
+          </div>
+        </form>
+      </main>
+      <footer>
+        <p>&copy;Fellipe Patrick & João Gomes</p>
+      </footer>
+      <script src="/assets/js/sign_up.js"></script>
+</body>
+</html>

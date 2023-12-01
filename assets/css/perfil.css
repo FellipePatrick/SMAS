@@ -98,6 +98,7 @@ button:hover {
    .minha-tabela td {
     border: 1px solid #ddd;
     padding: 8px;
+    text-align: center;
    }
    
    .minha-tabela tr:nth-child(even) {
@@ -108,7 +109,6 @@ button:hover {
    .minha-tabela th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
     background-color: #ffffff;
     color: rgb(0, 0, 0);
    }
@@ -133,14 +133,15 @@ button:hover {
         width: 80%;
         height: 450px;
     }
-    button{
+    button {
         align-items: center;
         width: 60px;
+        margin-left: 140px;
     }
   }
   
   
-  @media (max-width: 768px) and (min-width: 412px)  {
+  @media (max-width: 768px) and (min-width: 413px)  {
     .container section{
         width: 80%;
         height: 450px;
@@ -170,5 +171,12 @@ button:hover {
     button{
         height: 50px;
         font-size: 1.3rem;
+    }
+    .table h2{
+        font-size: 2rem;
+    }
+    .minha-tabela th,
+    .minha-tabela td {
+     font-size: 1.5rem;
     }
   }
