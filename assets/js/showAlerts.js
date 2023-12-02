@@ -45,6 +45,12 @@ const updateImg = () => {
 
 updateImg();
 
+const link_alerta = document.getElementById('link_alerta');
+
+link_alerta.onclick = () => {
+    alertar();
+}
+
 const perfil = () => {
     window.location.href = "../routes/perfil.html" 
     + "?email=" + encodeURIComponent(email);;

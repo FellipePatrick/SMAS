@@ -1,14 +1,3 @@
-class Alert{
-    constructor(alert, email,  name, path, data, timer){
-        this.alerts = alert;
-        this.email = email;
-        this.name = name;
-        this.path = path;
-        this.data = data;
-        this.timer = timer;
-    }
-}
-
 //Pegando o email por url
 const url = new URLSearchParams(window.location.search);
 const email = url.get('email');
@@ -32,20 +21,6 @@ const updateImg = () => {
 }
 
 updateImg();
-
-//Cadstra um alerta
-const cadastrar = () => {
-    const alerta = document.getElementById('alerta');
-    const alerts = JSON.parse(localStorage.getItem('alerts')) || [];
-    const user = getUser().user;
-    const date = new Date;
-    const data =  date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-    const timer = date.getHours() +  ":" + date.getMinutes();
-    const alert = new Alert(alerta.value,user.email,user.name,user.path, data, timer);
-    alerts.push(alert);
-    localStorage.setItem('alerts', JSON.stringify(alerts));
-    menu();
-}
 
 
 const perfil = () => {

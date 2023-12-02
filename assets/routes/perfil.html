@@ -41,8 +41,8 @@
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <img  alt="" class="img" id="img">
-                        <input type="file" placeholder="Enviar Foto" onchange="updateImageUser()" id="uploadImage" >
+                        <img  alt="" class="img" id="img" >
+                        <input type="file" placeholder="Enviar Foto" onchange="updateImageUser()" id="uploadImage" accept="image/*">
                     </div>
                     <div class="input">
                         <input type="text" id="email"></input>
@@ -52,7 +52,7 @@
                     <div class="input">
                         <input type="password" id="password"></input>
                     </div>
-                    <input type="button" onclick="perfil()" value="enviar"></input>
+                    <input type="button" onclick="enviar()" value="enviar"></input>
                 </div>
             </form>
         </section>
@@ -67,7 +67,7 @@
                     <th>Deletar</th>
                   </tr>
                 </thead>
-                <tbody>
+                <tbody >
                   <tr>
                     <td>1</td>
                     <td>João</td>
@@ -78,8 +78,8 @@
                 </tbody>
                </table>
         </section>
+        <section id="table"></section>
     </main>
-       
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>
