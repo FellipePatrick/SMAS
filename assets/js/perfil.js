@@ -32,18 +32,18 @@ const upadeteAlerts = (users) => {
 const getAlerts = () => {
     const alerts = getUser().alerts;
     const alertsUser = getUser().alertsUser;
-    const section = document.getElementById('table');
+    const section = document.getElementById('bodyTable');
     let cont = 1;
     for(let alert in alertsUser){
-        const id = document.createElement('p')
+        const id = document.createElement('td')
         id.innerHTML = cont;
-        const a = document.createElement('p');
+        const a = document.createElement('td');
         a.innerHTML = alertsUser[alert].alerts;
-        const data = document.createElement('p');
+        const data = document.createElement('td');
         data.innerHTML = alertsUser[alert].data;
-        const timer = document.createElement('p');
+        const timer = document.createElement('td');
         timer.innerHTML =  alertsUser[alert].timer;
-        const btn = document.createElement('input');
+        const btn = document.createElement('i');
         btn.type = 'button';
         btn.value = 'excluir';
         btn.id = cont;
@@ -61,8 +61,6 @@ const getAlerts = () => {
         section.appendChild(a);
         section.appendChild(data);
         section.appendChild(timer);
-        section.append(btn);
-        section.appendChild(editar);
         cont++;
     }
 }
