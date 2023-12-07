@@ -115,6 +115,23 @@ const updateImageUser = () => {
     const uploadImage = document.getElementById('uploadImage');
     //Verifica se tem arquivo no input
     if(uploadImage.files.length  > 0){
+        const file = uploadImage.files[0];
+        const leitor = new FileReader();
+        leitor.onload = (e) => {
+            path = e.target.result;
+            img.src = path;
+        };
+        
+        leitor.readAsDataURL(file);
+    }
+}
+
+
+const enviar = () => {
+    //Pega o arquivo vindo do input
+    const uploadImage = document.getElementById('uploadImage');
+    //Verifica se tem arquivo no input
+    if(uploadImage.files.length  > 0){
         //Busca o banco e o usuário
         const resultado = getUser();
         const users = resultado.users;
@@ -135,11 +152,6 @@ const updateImageUser = () => {
         
         leitor.readAsDataURL(file);
     }
-}
-
-const enviar = () => {
-    alert("Foto de perfil alterada com sucesso!");
-    perfil();
 }
 
 const perfil = () => {

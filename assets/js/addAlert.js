@@ -44,7 +44,7 @@ const cadastrar = () => {
     const alert = new Alert(alerta.value,user.email,user.name,user.path, data, timer);
     alerts.push(alert);
     localStorage.setItem('alerts', JSON.stringify(alerts));
-    menu();
+    perfil();
 }
 
 
