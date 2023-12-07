@@ -22,7 +22,7 @@ const getUser = () => {
             return {user: users[indice], users: users}
         }
     }
-    return {user: null, users:null};
+    window.location.href = "../../index.html";
 }
 
 const updateImg = () => {

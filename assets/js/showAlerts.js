@@ -4,24 +4,77 @@ const email = url.get('email');
 
 //Plota na tela os alertas
 const alerts = JSON.parse(localStorage.getItem('alerts')) || [];
-const section = document.getElementById('card');
+const section = document.getElementById('alertas');
 for(let alert in alerts){
     if(alerts[alert].email != null){
-        const a = document.createElement('input');
-        a.value = "alerta: " +  alerts[alert].alerts;
-        const autor = document.createElement('input');
-        autor.value = "autor: " + alerts[alert].name;
+        const divCard = document.createElement('div');
+        divCard.classList.add('card');
+
+        const divLeft = document.createElement('div');
+        divLeft.classList.add('left');
+
         const img = document.createElement('img');
         img.src = alerts[alert].path;
-        const data = document.createElement('input');
-        data.value  = "data: " + alerts[alert].data;
-        const timer = document.createElement('input');
-        timer.value  = "hora: " +  alerts[alert].timer;
-        section.appendChild(a);
-        section.appendChild(autor);
-        section.appendChild(img);
-        section.appendChild(data);
-        section.appendChild(timer);
+        const aNome =  document.createElement('a');
+        aNome.classList.add('bold', 'name');
+        aNome.innerHTML = "autor: " + alerts[alert].name;
+
+        const divGroup = document.createElement('div');
+        divGroup.classList.add('group-info');
+
+        const divInfoData = document.createElement('div');
+        divInfoData.classList.add('info');
+
+        const aData =  document.createElement('a');
+        aData.classList.add('bold');
+        const TextData = document.createElement('a');
+        TextData.innerHTML = " Data: " + '&nbsp';
+        const iData = document.createElement('i');
+        iData.classList.add('fa-regular', 'fa-clock');
+        aData.append(iData);
+        aData.appendChild(TextData);
+        
+        const aInfoData = document.createElement('a');
+
+        aInfoData.appendChild(aData);
+        aInfoData.innerHTML = alerts[alert].timer;
+        divInfoData.appendChild(aData);
+        divInfoData.appendChild(aInfoData);
+        divLeft.appendChild(divInfoData);
+
+        const divInfoHora = document.createElement('div');
+        divInfoHora.classList.add('info');
+
+        const aHora =  document.createElement('a');
+        aHora.classList.add('bold');
+        const Text = document.createElement('a');
+        Text.innerHTML = " Data: " + '&nbsp';
+        const iHora = document.createElement('i');
+        iHora.classList.add('fa-regular', 'fa-calendar');
+        aHora.append(iHora);
+        aHora.appendChild(Text);
+        
+        const aInfoH = document.createElement('a');
+        
+        aInfoH.appendChild(aHora);
+
+        aInfoH.innerHTML = alerts[alert].data;
+
+        divInfoHora.appendChild(aHora);
+        divInfoHora.appendChild(aInfoH);
+        
+
+        divLeft.appendChild(divInfoHora);
+
+        const divRight = document.createElement('div');
+        divRight.classList.add('right');
+
+        divCard.appendChild(img);
+        divCard.appendChild(aNome);
+        divCard.appendChild(divLeft);
+        divCard.appendChild(divRight);
+
+        section.appendChild(divCard);
     }
 }
 
@@ -34,7 +87,7 @@ const getUser = () => {
             return {user: users[indice], users: users};
         }
     }
-    return {user: null, users:null};
+    window.location.href = "../../index.html";
 }
 
 const updateImg = () => {

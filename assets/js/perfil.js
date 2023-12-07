@@ -10,7 +10,7 @@ const getUser = () => {
             return {user: users[indice], users: users, alertsUser : alertsUser.alertsUser, alerts: alertsUser.alerts};
         }
     }
-    return {user: null, users:null};
+    window.location.href = "../../index.html";
 }
 
 //Caso o usuário faça alguma alteração em seus dados será necessário atualizar os seus dados nos alertas
@@ -24,7 +24,6 @@ const upadeteAlerts = (users) => {
             localStorage.setItem('alerts', JSON.stringify(alerts));
         }
     }
-    console.log("oi")
     return {alertsUser, alerts};
 }
 
@@ -32,65 +31,51 @@ const upadeteAlerts = (users) => {
 const getAlerts = () => {
     const alerts = getUser().alerts;
     const alertsUser = getUser().alertsUser;
-    const section = document.getElementById('bodyTable');
+    const tbody = document.getElementById('bodyTable');
     let cont = 1;
     for(let alert in alertsUser){
-        const id = document.createElement('td')
+        const tr = document.createElement('tr');
+        tr.id = cont;
+        
+        const id = document.createElement('td');
         id.innerHTML = cont;
-        const a = document.createElement('td');
-        a.innerHTML = alertsUser[alert].alerts;
-        const data = document.createElement('td');
-        data.innerHTML = alertsUser[alert].data;
-        const timer = document.createElement('td');
-        timer.innerHTML =  alertsUser[alert].timer;
-        const btn = document.createElement('i');
-        btn.type = 'button';
-        btn.value = 'excluir';
-        btn.id = cont;
-        btn.onclick = () => {
-            deleteAlert(btn.id, alerts, alertsUser);
+
+        const tdEditar = document.createElement('td');
+        const iconEditar =  document.createElement('i');
+        iconEditar.id = cont;
+        iconEditar.style.color = 'green';
+       
+        iconEditar.classList.add('fa-solid', 'fa-pen');
+
+        const tdExcluir = document.createElement('td');
+        const iconExcluir = document.createElement('i');
+        iconExcluir.id = cont;
+        iconExcluir.style.color = 'red';
+        iconExcluir.onclick = () => {
+            deleteAlert(iconExcluir.id, alerts, alertsUser);
         }
-        const editar = document.createElement('input');
-        editar.type = 'button';
-        editar.value = 'editar';
-        editar.id = cont;
-        editar.onclick = () => {
-            updateAlert(a, editar ,alerts, alertsUser, editar.id);
+        iconExcluir.classList.add('fa-solid', 'fa-xmark');
+
+        const descricao = document.createElement('td');
+        descricao.innerHTML = alertsUser[alert].alerts; 
+        
+        iconEditar.onclick = () =>{
+            editAlert(iconEditar.id, alertsUser[alert].alerts);
         }
-        section.append(id);
-        section.appendChild(a);
-        section.appendChild(data);
-        section.appendChild(timer);
+
+        tdEditar.appendChild(iconEditar);
+        tdExcluir.appendChild(iconExcluir);
+
+        tr.appendChild(id);
+        tr.appendChild(descricao);
+        tr.appendChild(tdEditar);
+        tr.appendChild(tdExcluir);
+        
+        tbody.appendChild(tr);
         cont++;
     }
 }
 
-//Permite alterar o alerta já publicado
-const updateAlert = (a, editar, alerts, alertsUser, id) => {
-    a.contentEditable = "true";
-    a.style.backgroundColor = "green";
-    editar.value = "enviar";
-    //salvar os dados
-    editar.onclick = () => {
-        for(let alert in alerts){
-            if(email == alerts[alert].email){
-                if(JSON.stringify(alertsUser[id-1]) === JSON.stringify(alerts[alert])){
-                    if(alerts[alert].alerts != a.innerHTML){
-                        const date = new Date();
-                        const data =  date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
-                        const timer = date.getHours() +  ":" + date.getMinutes();
-                        alerts[alert].alerts = a.innerHTML;
-                        alerts[alert].data = data;
-                        alerts[alert].timer = timer;
-                        localStorage.setItem('alerts', JSON.stringify(alerts));
-                        location.reload();
-                    }
-                    break;
-                }
-            }
-        }
-    }
-}
 
 //Deleta um determinado alerta
 const deleteAlert = (id, alerts, alertsUser) => {
@@ -159,19 +144,25 @@ const enviar = () => {
 
 const perfil = () => {
     window.location.href = "../routes/perfil.html" 
-    + "?email=" + encodeURIComponent(email);;
+    + "?email=" + encodeURIComponent(email);
 }
 const menu = () => {
     window.location.href = "../routes/showAlerts.html" 
-    + "?email=" + encodeURIComponent(email);;
+    + "?email=" + encodeURIComponent(email);
 }
 const alertar = () => {
     window.location.href = "../routes/addAlert.html" 
-    + "?email=" + encodeURIComponent(email);;
+    + "?email=" + encodeURIComponent(email);
 }
 const rastreamento  = () => {
     window.location.href = "../routes/rastreamento.html" 
-    + "?email=" + encodeURIComponent(email);;
+    + "?email=" + encodeURIComponent(email);
+}
+
+const editAlert = (iconEditar, descricao) => {
+    window.location.href = "../routes/updateAlert.html" 
+    + "?email=" + encodeURIComponent(email) + "&id=" +  encodeURIComponent(iconEditar)
+    + "&descricao=" +  encodeURIComponent(descricao);
 }
 
 const sair = () => {

@@ -17,11 +17,11 @@
             <img  alt="imagem perfil" onclick="perfil()" id="img-perfil">
         </div>
         <div class="menu">
-            <a href="./perfil.html">perfil</a>
-            <a href="./menu.html">menu</a>
-            <a href="./addAlert.html">alertar</a>
-            <a href="./rastreamento.html">rastreamento</a>
-            <a href="../../index.html">Sair</a>
+            <a onclick="perfil()">perfil</a>
+            <a onclick="menu()">menu</a>
+            <a onclick="alertar()">alertar</a>
+            <a onclick="rastreamento()">rastreamento</a>
+            <a onclick="sair()">Sair</a>
         </div>
         <div class="menu-icon">&#9776;</div>
     </nav>
@@ -33,31 +33,30 @@
             <form action="">
                 <div class="groupInput">
                     <div class="input">
-                        <input type="text" placeholder="Municipio">
+                        <input type="text" id="municipality" disabled>
                     </div>
                     <div class="input">
-                        <input type="text" placeholder="Nome">
+                        <input type="text" disabled id="name">
                     </div>
                 </div>
                 <div class="groupInput">
-                    <div class="input">
-                        <select id="opciones" name="opciones" aria-placeholder="select">
+                    <div class="input" >
+                        <select id="opciones" name="opciones" aria-placeholder="select" disabled>
                             <option value="opcion1">Jataí   </option>
                             <option value="opcion2">Opción 2</option>
                             <option value="opcion3">Opción 3</option>
                           </select>
                     </div>
                     <div class="input">
-                        <input type="date" placeholder="20/10/2003" disabled>
+                        <input type="text" disabled id="date">
                     </div>
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <textarea type="text" placeholder="Descrição da ocasião" style="height: 100px;" cols="30" rows="10"></textarea>
+                        <textarea type="text" style="height: 100px;" cols="30" rows="10" id="descricao" contenteditable="true"></textarea>
                     </div>
-                    <button>
-                        salvar
-                    </button>
+                    <input type="button" id="salvar" value="salvar" onclick="updateAlert()">
+                    </input>
                 </div>
             </form>
         </section>
@@ -65,6 +64,6 @@
     <footer>
         <p>&copy;Fellipe Patrick & João Gomes</p>
         </footer>
-        <script src="../js/script.js"></script>
+        <script src="../js/updateAlert.js"></script>
     </body>
 </html>
