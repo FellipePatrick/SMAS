@@ -33,6 +33,18 @@ const updateImg = () => {
 
 updateImg();
 
+const updateScreen = () => {
+    const user = getUser().user;
+    const name = document.getElementById('name');
+    name.value = user.name;
+    const municipality = document.getElementById('municipality');
+    municipality.value = user.city;
+}
+
+
+updateScreen();
+
+
 //Cadstra um alerta
 const cadastrar = () => {
     const alerta = document.getElementById('alerta');
