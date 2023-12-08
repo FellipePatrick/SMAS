@@ -184,6 +184,7 @@ const getMunicipios = () => {
       });
 }
 
+getMunicipios();
 
 const perfil = () => {
     window.location.href = "../routes/perfil.html" 
