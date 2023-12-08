@@ -5,7 +5,7 @@ const email = url.get('email');
 //Plota na tela os alertas
 const alerts = JSON.parse(localStorage.getItem('alerts')) || [];
 const section = document.getElementById('alertas');
-for(let alert in alerts){
+for(let alert in alerts.reverse()){
     if(alerts[alert].email != null){
         const divCard = document.createElement('div');
         divCard.classList.add('card');
@@ -61,7 +61,7 @@ for(let alert in alerts){
         aNomeMuni.innerHTML = " Municipio: ";
         aMuni.appendChild(aNomeMuni);
         const aLocalMuni = document.createElement('a');
-        aLocalMuni.innerHTML = "&nbspMossoró";   
+        aLocalMuni.innerHTML = "&nbsp" + alerts[alert].municipality;   
         divMuni.appendChild(aMuni);
         divMuni.appendChild(aLocalMuni);
         divGroup.appendChild(divMuni);
@@ -76,7 +76,7 @@ for(let alert in alerts){
         aNomeEspecie.innerHTML = " Especie: ";
         aEspecie.appendChild(aNomeEspecie);
         const aEspecieT = document.createElement('a');
-        aEspecieT.innerHTML = "&nbsp" + "Jataí"; //Adicionar o nome da especie do alerta aqui
+        aEspecieT.innerHTML = "&nbsp" + alerts[alert].bee; 
         divEspecie.appendChild(aEspecie);
         divEspecie.appendChild(aEspecieT);
         divGroup.appendChild(divEspecie);

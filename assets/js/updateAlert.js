@@ -69,14 +69,33 @@ const upadeteAlerts = (users) => {
     return {alertsUser, alerts};
 }
 
+const getAlerts = () => {
+    const alerts = JSON.parse(localStorage.getItem('alerts')) || [];
+    let cont =  1;
+    for(let alert in alerts){
+        if(email == alerts[alert].email){
+            if(cont == id){
+                return alerts[alert];
+            }
+            cont++;
+        }
+    }
+    return null;
+
+}
+
 const updateScreen = () => {
     const user = getUser().user;
+    const alert = getAlerts();
+    const municipality = document.getElementById('cidades');
+    const bee = document.getElementById('abelhas');
     const name = document.getElementById('name');
     name.value = user.name;
     const descricao = document.getElementById('descricao');
-    descricao.value = descricaoUrl;
+    descricao.value = alert.alerts;
+    municipality.value = alert.municipality;
+    bee.value = alert.bee;
 }
-
 
 updateScreen();
 
@@ -86,18 +105,22 @@ const updateAlert = () => {
     const alertsUser = upadeteAlerts(getUser().user).alertsUser;
     const descricao = document.getElementById('descricao');
     const date = document.getElementById('date');
+    const municipality = document.getElementById('cidades');
+    const bee = document.getElementById('abelhas');
     //salvar os dados
     for(let alert in alerts){
         if(email == alerts[alert].email){
             if(JSON.stringify(alertsUser[id-1]) === JSON.stringify(alerts[alert])){
                 date.value = alertsUser[id-1].data;
-                if(alerts[alert].alerts != descricao.value && descricao.value != ""){
+                if((alerts[alert].alerts != descricao.value || alerts[alert].bee != bee.value || alerts[alert].municipality != municipality.value) && descricao.value != ""){
                     const date = new Date();
                     const data =  date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
                     const timer = date.getHours() +  ":" + date.getMinutes();
                     alerts[alert].alerts = descricao.value;
                     alerts[alert].data = data;
                     alerts[alert].timer = timer;
+                    alerts[alert].municipality = municipality.value;
+                    alerts[alert].bee = bee.value;
                     localStorage.setItem('alerts', JSON.stringify(alerts));
                     window.location.href = "../routes/perfil.html" 
                     + "?email=" + encodeURIComponent(email);
@@ -106,6 +129,7 @@ const updateAlert = () => {
         } 
     }
 }
+
 document.addEventListener('DOMContentLoaded', function () {
     const menuIcon = document.querySelector('.menu-icon');
     const menu = document.querySelector('.menu');

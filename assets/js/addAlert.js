@@ -1,11 +1,13 @@
 class Alert{
-    constructor(alert, email,  name, path, data, timer){
+    constructor(alert, email,  name, path, data, timer, municipality, bee){
         this.alerts = alert;
         this.email = email;
         this.name = name;
         this.path = path;
         this.data = data;
         this.timer = timer;
+        this.municipality = municipality;
+        this.bee = bee;
     }
 }
 
@@ -36,10 +38,8 @@ updateImg();
 const updateScreen = () => {
     const user = getUser().user;
     const name = document.getElementById('name');
-    name.value = user.name;
-    const municipality = document.getElementById('municipality');
-   }
-
+    name.value = user.name; 
+}
 
 updateScreen();
 
@@ -52,12 +52,17 @@ const cadastrar = () => {
     const date = new Date;
     const data =  date.getDate() + "/" + (date.getMonth() + 1) + "/" + date.getFullYear();
     const timer = date.getHours() +  ":" + date.getMinutes();
-    const alert = new Alert(alerta.value,user.email,user.name,user.path, data, timer);
-    alerts.push(alert);
-    localStorage.setItem('alerts', JSON.stringify(alerts));
-    menu();
+    const municipality = document.getElementById('cidades');
+    const bee = document.getElementById('abelhas');
+    if(municipality.value != "" && bee.value != "" ){
+        const alert = new Alert(alerta.value,user.email,user.name,user.path, data, timer, municipality.value, bee.value);
+        alerts.push(alert);
+        localStorage.setItem('alerts', JSON.stringify(alerts));
+        menu();
+    }else{
+        alert("Os campos municipio e especies precisam ser preenchidos!");
+    }
 }
-
 const select = document.getElementById('lista-cidades');
 
 

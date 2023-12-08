@@ -44,12 +44,12 @@
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <select id="opciones" name="opciones" aria-placeholder="select">
-                            <option value="opcion1">Jataí   </option>
-                            <option value="opcion2">Mandaçaia</option>
-                            <option value="opcion3">Uruçu</option>
-                            <option value="opcion4">Guaraipo</option>
-                          </select>
+                        <input list="lista-abelhas" id="abelhas" name="abelhas" autocomplete="off" placeholder="Jataí" required>
+                        <datalist id="lista-abelhas" name="abelhas" aria-placeholder="select">
+                            <option value="Jataí"></option>
+                            <option value="Africana"></option>
+                            <option value="Italiana"></option>
+                        </datalist>
                     </div>
                     <div class="input">
                         <input type="date" placeholder="20/10/2003" disabled>

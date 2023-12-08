@@ -1,3 +1,6 @@
+const boxWarning = document.getElementById('boxWarning');
+boxWarning.style.display = 'none';
+
 const autenticar = (email, password, warning) => {
     const users = JSON.parse(localStorage.getItem('users')) || [];
     let flag = true;
@@ -8,15 +11,25 @@ const autenticar = (email, password, warning) => {
                 break;
             }
         }
-    }
-  
+    }    
     if(flag){
-        alert("Email ou senha inválido")
+        boxWarning.style.display = 'flex';
+        boxWarning.style.backgroundColor = '#f1aeb5';
+        const p = document.getElementById('pWarning');
+        p.style.color = "#dc3545";
+        p.innerHTML = "Email ou senha inavlidos!";
     }else{//passando o email por url
         window.location.href="./assets/routes/showAlerts.html" 
         + "?email=" + encodeURIComponent(email.value);
     }
 }
+
+
+const closeWarning = () => {
+    const warning = document.getElementById('boxWarning');
+    warning.style.display = 'none';
+}
+
 
 
 const forms_login = document.getElementById('forms_login');

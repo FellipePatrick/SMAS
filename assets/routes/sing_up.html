@@ -15,6 +15,10 @@
           <div class="logo">
             <div class="imageLogo">
               <img src="../img/logo.png" alt="" class="image">
+              <div class="warning" id="boxWarning">
+                <p id="pWarning"></p>
+                <i class="fa-solid fa-xmark icone" onclick="closeWarning()"></i>
+              </div>
             </div>
             <div class="logoName">
               <h2 class="loginText">Cadastro</h2>
@@ -34,12 +38,15 @@
                 <a href="../../index.html" class="red">Voltar</a>
             </div>
           </div>
-          <p id="warning"></p>
         </form>
         <form class="login-form" id="login-password" style="display: none;">
           <div class="logo">
             <div class="imageLogo">
               <img src="../img/logo.png" alt="" class="image">
+              <div class="warning" id="boxWarningPassword">
+                <p id="pWarningS"></p>
+                <i class="fa-solid fa-xmark icone" onclick="closeWarning()"></i>
+              </div>
             </div>
             <div class="logoName">
               <h2 class="loginText">Senha</h2>
@@ -62,5 +69,6 @@
         <p>&copy;Fellipe Patrick & João Gomes</p>
       </footer>
       <script src="/assets/js/sign_up.js"></script>
+      <script src="https://kit.fontawesome.com/4fe9bd0970.js" crossorigin="anonymous"></script>
 </body>
 </html>
