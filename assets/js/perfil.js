@@ -20,6 +20,7 @@ const upadeteAlerts = (users) => {
     for(let alert in alerts){
         if(email == alerts[alert].email){
             alerts[alert].path = users.path;
+            alerts[alert].name = users.name;
             alertsUser.push(alerts[alert]);
             localStorage.setItem('alerts', JSON.stringify(alerts));
         }
