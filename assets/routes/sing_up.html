@@ -25,8 +25,9 @@
             <input type="text" id="email" name="email" required placeholder="user.mail@email.com" autofocus>
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" placeholder="José Ortega" required>
-            <label for="Municipality">Municipio</label>
-            <input type="text" id="municipality" name="Municipality" placeholder="São Pedro" required>
+            <label for="cidades">Municipio</label>
+            <select id="cidades" name="cidades" class="select2">
+            </select>
             <input type="button" class="button" value="Proximo" onclick="insert()"></input>
             <div class="links">
                 <a href="../../index.html" class="red">Voltar</a>
@@ -49,7 +50,6 @@
             <label for="password">Repetir Senha</label>
             <input type="password" id="repeatpassword" name="repeatpassword" placeholder="******" required>
             <input type="button" value="Definir" class="button" onclick="insert_password()">
-                
             </input>
             <div class="links">
                 <a href="./sing_up.html" class="red">Voltar</a>

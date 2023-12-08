@@ -38,8 +38,7 @@ const updateScreen = () => {
     const name = document.getElementById('name');
     name.value = user.name;
     const municipality = document.getElementById('municipality');
-    municipality.value = user.city;
-}
+   }
 
 
 updateScreen();
@@ -58,6 +57,33 @@ const cadastrar = () => {
     localStorage.setItem('alerts', JSON.stringify(alerts));
     menu();
 }
+const select = document.getElementById('cidades');
+
+const getMunicipios = () => {
+    const apiUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/rn/municipios';
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Erro de requisição: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        let cont = 0;
+        for(const dado of data){
+            const city = document.createElement('option');
+            city.innerHTML = data[cont]['nome'];
+            cont++;
+            select.appendChild(city);
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao consumir a API:', error);
+      });
+    }
+  
+getMunicipios();
+
 
 
 const perfil = () => {

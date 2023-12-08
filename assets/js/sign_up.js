@@ -50,6 +50,35 @@ const register = (email, name, municipality, password, warning) => {
     }
 }
 
+const select = document.getElementById('cidades');
+
+const getMunicipios = () => {
+    const apiUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/rn/municipios';
+    fetch(apiUrl)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error(`Erro de requisição: ${response.statusText}`);
+        }
+        return response.json();
+      })
+      .then(data => {
+        let cont = 0;
+        for(const dado of data){
+            const city = document.createElement('option');
+            city.innerHTML = data[cont]['nome'];
+            cont++;
+            select.appendChild(city);
+        }
+      })
+      .catch(error => {
+        console.error('Erro ao consumir a API:', error);
+      });
+    }
+  
+getMunicipios();
+
+
+
 //Voltando para a tela de login
 const voltar = () => {
     window.location.href = "../../index.html";
