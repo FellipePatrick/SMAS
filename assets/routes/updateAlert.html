@@ -32,8 +32,9 @@
             </div>
             <form action="">
                 <div class="groupInput">
-                    <select id="cidades" name="cidades" >
-                    </select>
+                    <input list="lista-cidades" id="cidades" name="cidades" autocomplete="off" placeholder="Municipio" required> 
+                    <datalist id="lista-cidades" name="cidades" class="select2" required>
+                    </datalist>
                     <div class="input">
                         <input type="text" disabled id="name">
                     </div>
@@ -54,7 +55,7 @@
                     <div class="input">
                         <textarea type="text" style="height: 100px;" cols="30" rows="10" id="descricao" contenteditable="true"></textarea>
                     </div>
-                    <input type="button" id="salvar" value="salvar" onclick="updateAlert()">
+                    <input type="button" class="button" id="salvar" value="salvar" onclick="updateAlert()">
                     </input>
                 </div>
             </form>

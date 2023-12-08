@@ -76,20 +76,29 @@ input:focus {
     margin-bottom: 15px;
 }
 
-button {
-    background-color: blue;
-    color: #ffffff;
 
-    font-weight: bold;
+.groupInput textarea{
+    border: none;
+    padding: 10px;
+    height: 100px;
+    width:200px;
+    border-radius: 5px;
+}
+
+.groupInput textarea:focus{
+    outline: none;
+    border: none;
+}
+
+
+
+.button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    height: 30px;
-    width: 20%;
-
 }
 
-button:hover {
+.button:hover {
     background-color: #ffffff;
     color: blue;
 }
@@ -132,6 +141,9 @@ button:hover {
     .container section .conteudo{
         padding: 20px;
     }
+    .groupInput textarea{
+        margin-left: 10px;
+    }
     input{
         margin-left: 10px;
     }
@@ -154,6 +166,11 @@ button:hover {
         font-size: 1.3rem;
         width: 250px;
         height: 60px;
+    }
+    .groupInput textarea{
+        font-size: 1.3rem;
+        width: 250px;
+        height: 150px;
     }
     select{
         font-size: 1.3rem;

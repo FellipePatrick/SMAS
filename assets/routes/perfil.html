@@ -35,9 +35,10 @@
                     <div class="input">
                         <input type="text" placeholder="Nome" id="name"></input>
                     </div>
-                    <div class="input">
-                        <input type="text" id="municipality"></input>
-                    </div>
+                    <input list="lista-cidades" id="cidades" name="cidades" autocomplete="off" required>
+
+                    <datalist id="lista-cidades" name="cidades" class="select2" required>
+                    </datalist>
                 </div>
                 <div class="groupInput">
                     <div class="input">
@@ -46,14 +47,14 @@
                         onchange="updateImageUser()"  id="uploadImage" accept="image/*">
                     </div>
                     <div class="input">
-                        <input type="text" id="email"></input>
+                        <input type="text" id="email" disabled></input>
                     </div>
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <input type="password" id="password"></input>
+                        <input type="password" id="password" disabled></input>
                     </div>
-                    <input type="button" onclick="enviar()" value="enviar"></input>
+                    <input type="button" onclick="enviar()" class="button" value="enviar"></input>
                 </div>
             </form>
         </section>

@@ -50,7 +50,8 @@ const register = (email, name, municipality, password, warning) => {
     }
 }
 
-const select = document.getElementById('cidades');
+const select = document.getElementById('lista-cidades');
+
 
 const getMunicipios = () => {
     const apiUrl = 'https://servicodados.ibge.gov.br/api/v1/localidades/estados/rn/municipios';
@@ -65,7 +66,7 @@ const getMunicipios = () => {
         let cont = 0;
         for(const dado of data){
             const city = document.createElement('option');
-            city.innerHTML = data[cont]['nome'];
+            city.value = data[cont]['nome'];
             cont++;
             select.appendChild(city);
         }
@@ -73,8 +74,9 @@ const getMunicipios = () => {
       .catch(error => {
         console.error('Erro ao consumir a API:', error);
       });
-    }
+}
   
+
 getMunicipios();
 
 

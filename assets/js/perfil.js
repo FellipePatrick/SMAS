@@ -97,7 +97,7 @@ const updateUser = () => {
     email_dom.value =  user.email;
     const name = document.getElementById('name');
     name.value=   user.name;
-    const city = document.getElementById('municipality');
+    const city = document.getElementById('cidades');
     city.value =  user.city;
     const password = document.getElementById('password');
     password.value =  user.password;
@@ -126,33 +126,39 @@ const updateImageUser = () => {
     }
 }
 
-
 const enviar = () => {
     //Pega o arquivo vindo do input
     const uploadImage = document.getElementById('uploadImage');
     //Verifica se tem arquivo no input
+    //Busca o banco e o usuário
+    const resultado = getUser();
+    const users = resultado.users;
+    //Pega o obejto user
+    const user = resultado.user;
     if(uploadImage.files.length  > 0){
-        //Busca o banco e o usuário
-        const resultado = getUser();
-        const users = resultado.users;
         const file = uploadImage.files[0];
         const leitor = new FileReader();
         leitor.onload = (e) => {
-            //Pega o obejto user
-            const user = resultado.user;
             //Pega a url da imagem e guarda no objeto
             user.path = e.target.result;
             getAlerts();
-            //Update no banco
-            localStorage.setItem('users', JSON.stringify(users));
             //Mostrando na tela a imagem
             img.src = user.path;
+            localStorage.setItem('users', JSON.stringify(users));
             location.reload();
         };
         
         leitor.readAsDataURL(file);
     }
+    const name = document.getElementById('name');
+    user.name = name.value;
+    const city = document.getElementById('cidades');
+    user.city = city.value;
+    //Update no banco
+    localStorage.setItem('users', JSON.stringify(users));
+    location.reload();
 }
+
 
 const perfil = () => {
     window.location.href = "../routes/perfil.html" 

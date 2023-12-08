@@ -20,8 +20,19 @@ const updateImg = () => {
     img_perfil.src = user.path;
 }
 
-updateImg();
+const producao = () => {
+    alert("A tela de rastreamento e detalhes de abelhas ainda está em produção!");
+}
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+    menuIcon.addEventListener('click', function () {
+        menu.classList.toggle('show');
+    });
+});
 
+
+updateImg();
 
 const perfil = () => {
     window.location.href = "../routes/perfil.html" 

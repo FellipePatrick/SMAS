@@ -65,6 +65,21 @@ for(let alert in alerts){
         divMuni.appendChild(aMuni);
         divMuni.appendChild(aLocalMuni);
         divGroup.appendChild(divMuni);
+        const divEspecie = document.createElement('div');
+        divEspecie.classList.add('info');
+        const aEspecie = document.createElement('a');
+        aEspecie.classList.add('bold');
+        const iEspecie = document.createElement('i');
+        iEspecie.classList.add('fa-solid', 'fa-bug');
+        aEspecie.appendChild(iEspecie);
+        const aNomeEspecie = document.createElement('a');
+        aNomeEspecie.innerHTML = " Especie: ";
+        aEspecie.appendChild(aNomeEspecie);
+        const aEspecieT = document.createElement('a');
+        aEspecieT.innerHTML = "&nbsp" + "Jataí"; //Adicionar o nome da especie do alerta aqui
+        divEspecie.appendChild(aEspecie);
+        divEspecie.appendChild(aEspecieT);
+        divGroup.appendChild(divEspecie);
         const divRight = document.createElement('div');
         divRight.classList.add('right');
         const descricao = document.createElement('p');
@@ -96,6 +111,16 @@ const updateImg = () => {
     const img_perfil = document.getElementById('img-perfil');
     img_perfil.src = user.path;
 }
+
+document.addEventListener('DOMContentLoaded', function () {
+    const menuIcon = document.querySelector('.menu-icon');
+    const menu = document.querySelector('.menu');
+    menuIcon.addEventListener('click', function () {
+        menu.classList.toggle('show');
+    });
+});
+
+
 
 updateImg();
 

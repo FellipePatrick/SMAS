@@ -34,8 +34,10 @@
             <form action="">
                 <div class="groupInput">
                    
-                    <select id="cidades" name="cidades" >
-                    </select>
+                    <input list="lista-cidades" id="cidades" name="cidades" autocomplete="off" placeholder="Municipio" required>
+
+                    <datalist id="lista-cidades" name="cidades" class="select2"  required>
+                    </datalist>
                     <div class="input">
                         <input type="text" placeholder="Nome" disabled id="name">
                     </div>
@@ -54,9 +56,9 @@
                 </div>
                 <div class="groupInput">
                     <div class="input">
-                        <textarea name="alerta" id="alerta" cols="30" rows="10"></textarea>
+                        <textarea name="alerta" id="alerta" cols="30" rows="10" placeholder="Descrição do alerta"></textarea>
                     </div>
-                    <input type="button" value="Cadastrar" onclick="cadastrar()">
+                    <input type="button" value="Cadastrar" class="button" onclick="cadastrar()">
                     </input>
                 </div>
             </form>

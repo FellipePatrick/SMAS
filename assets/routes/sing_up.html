@@ -26,8 +26,9 @@
             <label for="name">Nome</label>
             <input type="text" id="name" name="name" placeholder="José Ortega" required>
             <label for="cidades">Municipio</label>
-            <select id="cidades" name="cidades" class="select2">
-            </select>
+            <input list="lista-cidades" id="municipality" name="cidades" autocomplete="off" placeholder="Municipio" required>
+            <datalist id="lista-cidades" name="cidades" class="select2" required>
+            </datalist>
             <input type="button" class="button" value="Proximo" onclick="insert()"></input>
             <div class="links">
                 <a href="../../index.html" class="red">Voltar</a>
